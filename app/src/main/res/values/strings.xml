@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GitHubReposTest</string>
+    <string name="enter_keyword">Enter keyword</string>
+</resources>

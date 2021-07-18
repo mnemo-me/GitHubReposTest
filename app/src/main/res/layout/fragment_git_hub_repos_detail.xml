@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.github_repos_details.GitHubReposDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/git_hub_repo_detail_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/three_quarters_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/outline_arrow_back_black_24"/>
+
+        <TextView
+            android:id="@+id/git_hub_repo_detail_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/git_hub_repo_detail_back_button"
+            tools:text="Repository name"/>
+
+        <ImageView
+            android:id="@+id/git_hub_repo_detail_author_avatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="@dimen/default_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/git_hub_repo_detail_author_login"
+            app:layout_constraintTop_toBottomOf="@id/git_hub_repo_detail_name"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/git_hub_repo_detail_author_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_padding"
+            app:layout_constraintTop_toTopOf="@id/git_hub_repo_detail_author_avatar"
+            app:layout_constraintBottom_toBottomOf="@id/git_hub_repo_detail_author_avatar"
+            app:layout_constraintStart_toEndOf="@id/git_hub_repo_detail_author_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Author"/>
+
+        <TextView
+            android:id="@+id/git_hub_repo_detail_created_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/git_hub_repo_detail_star_image"
+            app:layout_constraintBottom_toBottomOf="@id/git_hub_repo_detail_star_image"
+            app:layout_constraintEnd_toStartOf="@id/git_hub_repo_detail_star_image"/>
+
+        <ImageView
+            android:id="@+id/git_hub_repo_detail_star_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/default_padding"
+            app:layout_constraintTop_toBottomOf="@id/git_hub_repo_detail_author_avatar"
+            app:layout_constraintStart_toEndOf="@id/git_hub_repo_detail_created_at"
+            app:layout_constraintEnd_toStartOf="@id/git_hub_repo_detail_stars_count"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:src="@drawable/outline_star_rate_black_24"/>
+
+        <TextView
+            android:id="@+id/git_hub_repo_detail_stars_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/git_hub_repo_detail_star_image"
+            app:layout_constraintBottom_toBottomOf="@id/git_hub_repo_detail_star_image"
+            app:layout_constraintStart_toEndOf="@id/git_hub_repo_detail_star_image"
+            app:layout_constraintEnd_toStartOf="@id/git_hub_repo_detail_fork_image"
+            tools:text="1 000"/>
+
+        <ImageView
+            android:id="@+id/git_hub_repo_detail_fork_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/default_padding"
+            app:layout_constraintStart_toEndOf="@id/git_hub_repo_detail_stars_count"
+            app:layout_constraintEnd_toStartOf="@id/git_hub_repo_detail_forks_count"
+            app:layout_constraintTop_toBottomOf="@id/git_hub_repo_detail_author_avatar"
+            android:src="@drawable/fork"/>
+
+        <TextView
+            android:id="@+id/git_hub_repo_detail_forks_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/git_hub_repo_detail_star_image"
+            app:layout_constraintBottom_toBottomOf="@id/git_hub_repo_detail_star_image"
+            app:layout_constraintStart_toEndOf="@id/git_hub_repo_detail_fork_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="600"/>
+
+        <View
+            android:id="@+id/git_hub_repo_detail_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/half_padding"
+            android:layout_marginEnd="@dimen/half_padding"
+            android:background="@color/black"
+            android:layout_marginTop="@dimen/default_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/git_hub_repo_detail_star_image"/>
+
+        <TextView
+            android:id="@+id/git_hub_repo_detail_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/git_hub_repo_detail_divider"
+            tools:text="Some description here"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
